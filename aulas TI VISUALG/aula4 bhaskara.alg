@@ -7,21 +7,21 @@ var
 a, b,c, xm, xn, d, r, dn: Real
 inicio
 // Se��o de Comandos
-Escreval("Digite o valor de A: ")
-Leia(a)
-Escreval
-Escreval
-Escreval("Digite o valor de B: ")
-Leia(b)
-Escreval
-Escreval
-Escreval("Digite o valor de C: ")
-Leia(c)
-Escreval
-Escreval
-d <- ((b*b)-(4*a*c))
-Escreval("Delta: ", d)
-se d<0 entao
+  Escreval("Digite o valor de A: ")
+  Leia(a)
+  Escreval
+  Escreval
+  Escreval("Digite o valor de B: ")
+  Leia(b)
+  Escreval
+  Escreval
+  Escreval("Digite o valor de C: ")
+  Leia(c)
+  Escreval
+  Escreval
+  d <- ((b*b)-(4*a*c))
+  Escreval("Delta: ", d)
+   se d<0 entao
    dn <- -(d)
    d <- dn
    r <- RaizQ(d)
