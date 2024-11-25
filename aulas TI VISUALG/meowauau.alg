@@ -1,13 +1,13 @@
 algoritmo "semnome"
-// Função :
+// Funï¿½ï¿½o :
 // Autor :
 // Data : 25/11/2024
-// Seção de Declarações 
+// Seï¿½ï¿½o de Declaraï¿½ï¿½es 
 var
    meow, auau: Caracter
 inicio
-// Seção de Comandos 
-   Escreval("Meow?")
+// Seï¿½ï¿½o de Comandos 
+   Escreval("Meow ou AuAu?")
    Leia(meow)
    Escolha(meow)
    Caso "meow"
