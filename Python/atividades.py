@@ -1,5 +1,10 @@
-idade = 0
+idade = nome = 0
 
+print("Qual teu nome??")
+nome = (input("Digite seu nome: "))
+print(f"Olá, {nome}!")
+
+print("Qual a tua idade?")
 idade = int(input("Digite sua idade: "))
 
 if idade >= 18:
