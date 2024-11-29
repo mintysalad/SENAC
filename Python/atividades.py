@@ -13,3 +13,16 @@ elif idade < 18 and idade > 12:
     print("Você é adolescente! :D")
 else:
     print("Você é criança.")
+
+gastosHyuna = [500, 300, 200, 800]
+gastosLuka = [200, 300, 500, 700]
+
+totalHyuna = sum(gastosHyuna)
+totalLuka = sum(gastosLuka)
+
+if totalHyuna > totalLuka:
+    print("Hyuna gastou mais este mês.")
+elif totalHyuna < totalLuka:
+    print("Luka gastou mais este mês.")
+else:
+    print("Eles gastaram o mesmo valor.")
