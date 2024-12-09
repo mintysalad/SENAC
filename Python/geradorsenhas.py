@@ -93,4 +93,4 @@ class PasswordGeneratorApp(ctk.CTk):
 
 if __name__ == "__main__":
     app = PasswordGeneratorApp()
-    app.mainloop
+    app.mainloop()
