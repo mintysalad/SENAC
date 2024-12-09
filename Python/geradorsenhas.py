@@ -29,7 +29,7 @@ class PasswordGeneratorApp(ctk.CTk):
 
         # Checkboxes para critérios
         self.numbers_checkbox = ctk.CTkCheckBox(
-        self, text="Incluir Números", variable=self.include_numbers
+            self, text="Incluir Números", variable=self.include_numbers
         )
         self.numbers_checkbox.pack(pady=5)
 
