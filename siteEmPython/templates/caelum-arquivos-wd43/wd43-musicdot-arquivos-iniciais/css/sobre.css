@@ -1,0 +1,105 @@
+body{
+    width: 80%;
+    max-width: 940px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Helvetica", "Lucida Grande", sans-serif;
+    color: #3d3d3d;
+}
+
+.titulo{
+    padding: 10px;
+    font-size: 32px;
+    background-color: #b6c6cf;
+}
+
+.subtitulo{
+    border-bottom: 2px solid black;
+}
+
+figure{
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 30px;
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+}
+
+figcaption{
+    margin-top: 10px;
+    margin-block-end: 15px;
+    font-style: italic;
+}
+
+
+matriz-musicdot{
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+familia-tupfeln{
+    width: 275px;
+    float:right
+}
+
+figure img{
+    width: 100%;
+}
+
+p{
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.contato__subtitulo{
+    display: inline;
+}
+
+.contato__secao{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 16px;
+}
+
+.contato__secao--telefone{
+    margin-left: 32px;
+}
+
+.contato__info{
+    margin: 16px 0 24px;
+    padding-left: 32px;
+}
+
+.contato__info-titulo,
+.contato__info-descricao{
+    display: inline;
+}
+
+.contato__info-descricao{
+    margin-right: 10px;
+}
+
+.rodape{
+    padding: 1.75em 0;
+
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.rodape__logo{
+    width: 6em;
+}
+
+.rodape__copyright{
+    display: inline;
+    margin-left: 1em;
+}
