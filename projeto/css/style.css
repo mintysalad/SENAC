@@ -1,0 +1,309 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-bottom: 2px solid #a80a0a;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #a80a0a;
+    text-shadow: 2px 2px #000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #990000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #a80a0a;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+header nav ul li a:hover {
+    background-color: #a80a0a;
+    transform: scale(1.1);
+}
+
+/* Seções principais */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background: #000; /* Fundo preto */
+    border: 2px solid #a80a0a;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px #a80a0a;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #a80a0a;
+    border-bottom: 1px solid #a80a0a;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #000;
+}
+
+/* Sobre mim */
+#sobre-mim img {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #a80a0a;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+#sobre-mim p, #sobre-mim ul {
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#sobre-mim ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#sobre-mim ul li a {
+    color: #a80a0a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#sobre-mim ul li a:hover {
+    color: #ffffff;
+}
+
+/* Habilidades */
+#habilidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#habilidades ul li {
+    background: #222;
+    padding: 10px 20px;
+    border: 1px solid #a80a0a;
+    color: #a80a0a;
+    font-weight: bold;
+    border-radius: 3px;
+    text-align: center;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Projetos e Formação */
+section div {
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section div h3 {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px #000;
+}
+
+section div p a {
+    color: #a80a0a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+section div p a:hover {
+    color: #ffffff;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #a80a0a;
+    border-radius: 5px;
+    background: #222;
+    color: #ffffff;
+}
+
+form button {
+    background-color: #a80a0a;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    border-top: 2px solid #a80a0a;
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer p {
+    color: #a80a0a;
+    text-shadow: 1px 1px #000;
+}
+
+/* Corpo */
+body {
+    font-family: 'Century', sans-serif;
+    line-height: 1.6;
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo principal */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    color: #fff;
+    background: url('img/background.jpg') no-repeat center center fixed; /* Plano de fundo */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Corações animados */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('img/coracao.png') no-repeat center center; /* Imagem do coração */
+    background-size: contain;
+    animation: fall 5s linear infinite;
+    pointer-events: none; /* Para evitar interferência com cliques */
+}
+
+/* Geração de múltiplos corações com posições e tempos diferentes */
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.heart:nth-child(2) {
+    left: 20%;
+    animation-delay: 1s;
+}
+.heart:nth-child(3) {
+    left: 30%;
+    animation-delay: 2s;
+}
+.heart:nth-child(4) {
+    left: 40%;
+    animation-delay: 3s;
+}
+.heart:nth-child(5) {
+    left: 50%;
+    animation-delay: 4s;
+}
+.heart:nth-child(6) {
+    left: 60%;
+    animation-delay: 5s;
+}
+.heart:nth-child(7) {
+    left: 70%;
+    animation-delay: 6s;
+}
+.heart:nth-child(8) {
+    left: 80%;
+    animation-delay: 7s;
+}
+.heart:nth-child(9) {
+    left: 90%;
+    animation-delay: 8s;
+}
+
+.heart:nth-child(10) {
+    left: 100%;
+    animation-delay: 9s;
+    animation: pulse 2s;
+}
+
