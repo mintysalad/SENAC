@@ -1,0 +1,73 @@
+{
+    "title": "Meu Portfólio",
+    "author": "Pietra Mikaela da Silva",
+    "sections": [
+      {
+        "id": "sobre-mim",
+        "content": {
+          "image": "img/eu.jpg",
+          "description": "Olá! Me chamo Pietra Mikaela.^^ Sou fluente em inglês, adoro aprender sobre diversas coisas!",
+          "links": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/mintysalad"
+            },
+            {
+              "name": "Instagram",
+              "url": "https://www.instagram.com/mintyysalad/"
+            },
+            {
+              "name": "Tiktok",
+              "url": "https://www.tiktok.com/@mintysalad"
+            }
+          ]
+        }
+      },
+      {
+        "id": "habilidades",
+        "content": ["HTML", "CSS", "JavaScript", "Python"]
+      },
+      {
+        "id": "formacao",
+        "content": "Curso de TI SenacNH, estudante do Ensino Médio."
+      },
+      {
+        "id": "projetos",
+        "content": [
+          {
+            "name": "Projetos SENAC",
+            "description": "Nesta página, é possível encontrar todos os meus códigos e projetos do GitHub.",
+            "link": "https://github.com/mintysalad/SENAC"
+          }
+        ]
+      },
+      {
+        "id": "contato",
+        "form": {
+          "fields": [
+            {
+              "label": "Nome",
+              "type": "text",
+              "required": true
+            },
+            {
+              "label": "E-mail",
+              "type": "email",
+              "required": true
+            },
+            {
+              "label": "Mensagem",
+              "type": "textarea",
+              "required": true
+            }
+          ],
+          "submit": "Enviar"
+        }
+      }
+    ],
+    "footer": {
+      "text": "© 2025 Pietra. Todos os direitos reservados.",
+      "back_to_top": true
+    }
+  }
+  
