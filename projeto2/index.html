@@ -15,35 +15,22 @@
     /* Corpo principal */
     body {
       font-family: 'Courier New', Courier, monospace;
-      background: white;
-      color: black;
-    }
-
-    /* Fundo quadriculado */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #ff9999 25%, white 25%, white 50%, #ff9999 50%, #ff9999 75%, white 75%, white);
-      background-size: 40px 40px;
-      z-index: -1;
+      background: #121212;
+      color: #E0E0E0;
     }
 
     /* Cabeçalho */
     header {
       text-align: center;
-      background-color: #f5f5f5;
-      color: #ff4d4d;
+      background-color: #1E1E1E;
+      color: #BB86FC;
       padding: 20px;
-      border-bottom: 2px solid #ff6666;
+      border-bottom: 2px solid #BB86FC;
     }
 
     header h1 {
       font-size: 2.5rem;
-      text-shadow: 1px 1px white;
+      text-shadow: 1px 1px #000;
     }
 
     header nav ul {
@@ -56,16 +43,16 @@
 
     header nav ul li a {
       text-decoration: none;
-      color: white;
-      background-color: #ff4d4d;
+      color: #121212;
+      background-color: #BB86FC;
       padding: 10px 20px;
-      border: 2px solid white;
+      border: 2px solid #1E1E1E;
       transition: background-color 0.3s, transform 0.3s;
     }
 
     header nav ul li a:hover {
-      background-color: white;
-      color: #ff4d4d;
+      background-color: #3700B3;
+      color: #E0E0E0;
       transform: scale(1.1);
     }
 
@@ -74,15 +61,15 @@
       margin: 20px auto;
       padding: 20px;
       width: 80%;
-      background: #f9f9f9;
-      border: 2px solid #ff9999;
-      box-shadow: 0 0 10px #ff9999;
+      background: #1E1E1E;
+      border: 2px solid #BB86FC;
+      box-shadow: 0 0 10px #3700B3;
     }
 
     section h2 {
       font-size: 2rem;
-      color: #ff6666;
-      text-shadow: 1px 1px white;
+      color: #BB86FC;
+      text-shadow: 1px 1px #000;
       margin-bottom: 15px;
     }
 
@@ -92,7 +79,7 @@
 
     section ul li {
       list-style: square;
-      color: #333;
+      color: #E0E0E0;
     }
 
     /* Estilo da imagem */
@@ -102,13 +89,13 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 3px solid #ff6666;
-      box-shadow: 0 0 10px #ff9999;
+      border: 3px solid #BB86FC;
+      box-shadow: 0 0 10px #3700B3;
     }
 
     /* Links dos projetos e redes sociais */
     a {
-      color: #ff6666;
+      color: #BB86FC;
       text-decoration: none;
     }
 
@@ -122,21 +109,21 @@
       width: 100%;
       margin-bottom: 10px;
       padding: 10px;
-      background: white;
-      color: #333;
-      border: 2px solid #ff6666;
+      background: #1E1E1E;
+      color: #E0E0E0;
+      border: 2px solid #BB86FC;
     }
 
     form button {
-      background-color: #ff6666;
-      color: white;
+      background-color: #BB86FC;
+      color: #121212;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s, transform 0.3s;
     }
 
     form button:hover {
-      background-color: #ff4d4d;
+      background-color: #3700B3;
       transform: scale(1.1);
     }
 
@@ -144,13 +131,14 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #f5f5f5;
-      border-top: 2px solid #ff9999;
+      background-color: #1E1E1E;
+      border-top: 2px solid #BB86FC;
     }
 
     footer p {
-      color: #ff6666;
+      color: #BB86FC;
     }
+
   </style>
 </head>
 <body>
