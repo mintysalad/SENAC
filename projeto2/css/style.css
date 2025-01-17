@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo principal */
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background: white;
+    color: black;
+  }
+  
+  /* Fundo quadriculado */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff9999 25%, white 25%, white 50%, #ff9999 50%, #ff9999 75%, white 75%, white);
+    background-size: 40px 40px;
+    z-index: -1;
+  }
+  
+  /* Cabeçalho */
+  header {
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #ff4d4d;
+    padding: 20px;
+    border-bottom: 2px solid #ff6666;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px white;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff4d4d;
+    padding: 10px 20px;
+    border: 2px solid white;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    background-color: white;
+    color: #ff4d4d;
+    transform: scale(1.1);
+  }
+  
+  /* Seções */
+  section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background: #f9f9f9;
+    border: 2px solid #ff9999;
+    box-shadow: 0 0 10px #ff9999;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: #ff6666;
+    text-shadow: 1px 1px white;
+    margin-bottom: 15px;
+  }
+  
+  section p, section ul {
+    margin-bottom: 15px;
+  }
+  
+  section ul li {
+    list-style: square;
+    color: #333;
+  }
+  
+  /* Estilo da imagem */
+  #sobre-mim img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ff6666;
+    box-shadow: 0 0 10px #ff9999;
+  }
+  
+  /* Links dos projetos e redes sociais */
+  a {
+    color: #ff6666;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Formulário */
+  form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    color: #333;
+    border: 2px solid #ff6666;
+  }
+  
+  form button {
+    background-color: #ff6666;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.1);
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-top: 2px solid #ff9999;
+  }
+  
+  footer p {
+    color: #ff6666;
+  }
+  
