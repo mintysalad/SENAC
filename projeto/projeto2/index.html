@@ -33,6 +33,12 @@
       text-shadow: 1px 1px #000;
     }
 
+    #data-hora, #contador-visitas {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #E0E0E0;
+    }
+
     header nav ul {
       list-style: none;
       display: flex;
@@ -138,13 +144,42 @@
     footer p {
       color: #BB86FC;
     }
-
   </style>
+  <script>
+    function atualizarDataHora() {
+      const elementoDataHora = document.getElementById('data-hora');
+      const agora = new Date();
+      const formatoDataHora = agora.toLocaleString('pt-BR', {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      });
+      elementoDataHora.textContent = formatoDataHora;
+    }
+
+    function atualizarContadorVisitas() {
+      const elementoContador = document.getElementById('contador-visitas');
+      let visitas = localStorage.getItem('contadorVisitas');
+      if (!visitas) {
+        visitas = 0;
+      }
+      visitas++;
+      localStorage.setItem('contadorVisitas', visitas);
+      elementoContador.textContent = `Visitas: ${visitas}`;
+    }
+
+    window.onload = () => {
+      atualizarDataHora();
+      setInterval(atualizarDataHora, 1000);
+      atualizarContadorVisitas();
+    };
+  </script>
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
     <h1>Meu Perfil</h1>
+    <div id="data-hora"></div>
+    <div id="contador-visitas"></div>
     <nav>
       <ul>
         <li><a href="#sobre-mim">Sobre Mim</a></li>
@@ -157,14 +192,13 @@
 
   <!-- Seção: Sobre Mim -->
   <section id="sobre-mim">
-    <h2>Sobre Mim</h2>
-    <img src="img/eu.jpg" alt="Foto de Perfil">
+    <img src="img/eu.png" alt="Eu">
     <p>Olá! Me chamo Pietra Mikaela.^^</p>
     <p>Sou fluente em inglês, adoro aprender sobre diversas coisas!</p>
     <ul>
       <li><a href="https://github.com/mintysalad" target="_blank">GitHub</a></li>
       <li><a href="https://www.instagram.com/mintyysalad/" target="_blank">Instagram</a></li>
-      <li><a href="https://www.tiktok.com/@mintysalad" target="_blank">TikTok</a></li>
+      <li><a href="https://www.tiktok.com/@mintysalad" target="_blank">Tiktok</a></li>
     </ul>
   </section>
 

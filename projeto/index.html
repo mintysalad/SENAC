@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Link para Tailwind CSS (opcional) -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <style>
     /* Reset básico */
     * {
@@ -20,11 +18,11 @@
       font-family: 'Courier New', Courier, monospace;
       line-height: 1.5;
       color: #fff;
-      background: url('img/background.jpg') no-repeat center center fixed; /* Plano de fundo */
+      background: url('img/background.jpg') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 0;
-  
+      overflow: hidden;
     }
 
     header {
@@ -63,6 +61,17 @@
       transform: scale(1.1);
     }
 
+    .info-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid #a80a0a;
+      color: #fff;
+      text-shadow: 1px 1px #000;
+    }
+
     section {
       margin: 20px auto;
       padding: 20px;
@@ -82,27 +91,6 @@
       text-shadow: 1px 1px #000;
     }
 
-    form input, form textarea, form button {
-      padding: 10px;
-      border: 1px solid #a80a0a;
-      border-radius: 5px;
-      background: #222;
-      color: #ffffff;
-    }
-
-    form button {
-      background-color: #a80a0a;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    form button:hover {
-      background-color: #cc0000;
-      transform: scale(1.1);
-    }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -115,80 +103,76 @@
       text-shadow: 1px 1px #000;
     }
 
-    /* Animação de corações */
+    /* Efeito de chuva de corações */
+    .heart {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: -50px;
+      background: url('img/coracao.png') no-repeat center center;
+      background-size: cover;
+      animation: fall 5s linear infinite;
+    }
+
     @keyframes fall {
       0% {
         transform: translateY(-100px) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
       }
       100% {
         transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
       }
     }
-
-    .heart {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: url('img/coracao.png') no-repeat center center;
-      background-size: contain;
-      animation: fall 5s linear infinite;
-      pointer-events: none;
-    }
-
-    .heart:nth-child(1) {
-      left: 10%;
-      animation-delay: 0s;
-    }
-    .heart:nth-child(2) {
-      left: 20%;
-      animation-delay: 1s;
-    }
-    .heart:nth-child(3) {
-      left: 30%;
-      animation-delay: 2s;
-    }
-    .heart:nth-child(4) {
-      left: 40%;
-      animation-delay: 3s;
-    }
-    .heart:nth-child(5) {
-      left: 50%;
-      animation-delay: 4s;
-    }
-    .heart:nth-child(6) {
-      left: 60%;
-      animation-delay: 5s;
-    }
-    .heart:nth-child(7) {
-      left: 70%;
-      animation-delay: 6s;
-    }
-    .heart:nth-child(8) {
-      left: 80%;
-      animation-delay: 7s;
-    }
-    .heart:nth-child(9) {
-      left: 90%;
-      animation-delay: 8s;
-    }
   </style>
+  <script>
+    // Atualizar data e hora
+    function atualizarDataHora() {
+      const elementoDataHora = document.getElementById('data-hora');
+      const agora = new Date();
+      const formatoDataHora = agora.toLocaleString('pt-BR', {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      });
+      elementoDataHora.textContent = formatoDataHora;
+    }
+
+    // Contador de visitantes
+    function contadorVisitantes() {
+      const elementoContador = document.getElementById('contador-visitantes');
+      let contador = localStorage.getItem('contadorVisitantes') || 0;
+      contador++;
+      localStorage.setItem('contadorVisitantes', contador);
+      elementoContador.textContent = `Visitantes: ${contador}`;
+    }
+
+    // Criar efeito de chuva de corações
+    function criarCoracoes() {
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }, 300);
+    }
+
+    // Inicializar funções ao carregar a página
+    window.onload = () => {
+      atualizarDataHora();
+      setInterval(atualizarDataHora, 1000);
+      contadorVisitantes();
+      criarCoracoes();
+    };
+  </script>
 </head>
 <body>
-  <!-- Corações para animação -->
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
+  <!-- Barra de informações -->
+  <div class="info-bar">
+    <div id="data-hora">Carregando data e hora...</div>
+    <div id="contador-visitantes">Visitantes: Carregando...</div>
+  </div>
 
   <!-- Cabeçalho -->
   <header>
@@ -204,9 +188,9 @@
     </nav>
   </header>
 
-  <!-- Resto do conteúdo (sobre-mim, habilidades, etc.) -->
+  <!-- Seções principais -->
   <section id="sobre-mim">
-    <img src="img/eu.jpg" alt="Eu">
+    <img src="img/eu.png" alt="Eu">
     <p>Olá! Me chamo Pietra Mikaela.^^</p>
     <p>Sou fluente em inglês, adoro aprender sobre diversas coisas!</p>
     <ul>
@@ -215,7 +199,7 @@
       <li><a href="https://www.tiktok.com/@mintysalad" target="_blank">Tiktok</a></li>
     </ul>
   </section>
-  <!-- Bloco 2: Habilidades -->
+
   <section id="habilidades">
     <h2>Habilidades</h2>
     <ul>
@@ -226,13 +210,11 @@
     </ul>
   </section>
 
-  <!-- Bloco 3: Formação Acadêmica -->
   <section id="formacao">
     <h2>Formação Acadêmica</h2>
     <p>Curso de TI SenacNH, estudante do Ensino Médio.</p>
   </section>
 
-  <!-- Bloco 4: Experiência e Projetos -->
   <section id="projetos">
     <h2>Experiência e Projetos</h2>
     <div>
@@ -241,8 +223,7 @@
     </div>
   </section>
 
-<!-- Bloco 5: Contato -->
-<section id="contato">
+  <section id="contato">
     <h2>Contato</h2>
     <form action="mailto:seu-email@example.com" method="POST" enctype="text/plain">
       <label for="nome">Nome:</label>
